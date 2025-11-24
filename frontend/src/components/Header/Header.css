@@ -1,0 +1,71 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header-img.png') no-repeat center center;
+    /* Scale the background image so that the entire image is visible inside the element — without cutting any part of it. */
+    background-size: cover;
+    position: relative;
+    border-radius: 7px;
+}
+@media (max-width:1050px){
+    .header {
+        height: 38vw;
+    }
+}
+.header::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.121);
+}
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 2s;
+}
+/* @media (max-width:1050px) {
+    .header-contents{
+        max-width: 45%;
+    }
+} */
+@media (max-width:750px) {
+    .header-contents{
+        max-width: 65%;
+    }
+}
+.header-contents h2{
+    font-weight: 800;
+    color: white;
+    /* Make the font size the larger value between 4.5vw and 22px. */
+    font-size: max(4.5vw, 22px);
+}
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+@media (max-width:750px) {
+    .header-contents p{
+        display: none;
+    }
+}
+.header-contents button{
+    border: none;
+    color: var(--button-color);
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+@media (max-width:750px) {
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
