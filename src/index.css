@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --transition: all 0.3s ease;
+  --text-color: #49557e;
+  --main-color: tomato;
+  --button-color: #747474;
+}
+
+/* here we add some css for all the html elements */
+* {
+  padding: 0;
+  margin: 0;
+  /* box-sizing:content-box 200px (content)+20px+20px (left & right padding)+5px+5px (borders)=250px total */
+  /* while box-sizing: border-box The total width stays 200px, because padding and border are included inside that 200px. */
+  box-sizing: border-box;
+  font-family: Outfit;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  width: 80%;
+  margin: auto;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fadeOut{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}

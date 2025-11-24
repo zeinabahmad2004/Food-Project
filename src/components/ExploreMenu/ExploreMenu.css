@@ -1,0 +1,66 @@
+.explore-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.explore-menu h1{
+    color: #262626;
+    font-weight: 500;
+}
+.explore-menu .explore-menu-text{
+    max-width: 60%;
+    color: #808080;
+}
+@media (max-width:1050px){
+    .explore-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}
+.explore-menu .explore-menu-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+}
+.explore-menu .explore-menu-div::-webkit-scrollbar{
+    display: none;
+}
+/* each item gets its own slot (prevents reflow when one scales) */
+.explore-menu .explore-menu-list-item {
+    flex: 0 0 100px;
+    /* fixed slot width: adjust (120px) as you like */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    /* for z-index effect */
+}
+.explore-menu .explore-menu-div .explore-menu-list-item img{
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.explore-menu .explore-menu-div .explore-menu-list-item p{
+    margin-top: 10px;
+    color: #747474;
+    font-size: max(1.3vw,14px);
+    cursor: pointer;
+}
+.explore-menu hr{
+    margin: 10px 0;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+}
+.explore-menu .explore-menu-div .explore-menu-list-item .active{
+    border: 3px solid var(--main-color);
+    padding: 2px;
+    z-index: 2;
+}
